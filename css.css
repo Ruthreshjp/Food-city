@@ -1,0 +1,315 @@
+::after::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 100px;
+    background-color: #ffeae0;
+}
+.nav{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.nav .logo h1{
+    font-weight: 600;
+    font-family: sans-serif;
+    color: black;
+}
+.nav .logo b{
+    color: #ff511c;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+.nav ul li{
+  
+    margin-right: 30px;
+}
+.nav ul li a{
+    
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family:  sans-serif;
+    font-size: 18px;
+}
+.nav ul li a .cc{
+    
+    background-color: #ff511c ;
+    color: white;
+    outline: none;
+    border : none;
+    border-radius: 6px;
+}
+.nav ul .active::after{
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color:#ff511c;
+    display: flex;
+    position: relative;
+    margin-left:  10px;
+
+}
+input{
+    padding:  10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.signin{
+    background: transparent;
+    border: none;
+
+}
+.signup{
+    background-color: #ff511c ;
+    color: white;
+    outline: none;
+    border : none;
+    border-radius: 5px;
+}
+  .content{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+    margin-top: 130px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.content .content-left{
+    display: block ;
+    width: 100%;
+}
+.grid .content .content-right{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content .content-left .info h2{
+    font-size: 60px;
+    font-family: sans-serif;
+    margin-bottom:  30px;
+
+}
+.content .content-left .info p{
+    font-size: 25px;
+    line-height:  2pc;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+.content .content-left button{
+    padding: 10px 23px;
+    background-color: #ff511c ;
+    color: white;
+    outline: none;
+    border : none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+
+.content .content-right .img {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Add this line to align content to the right */
+}
+
+.content .content-right img {
+    width: 400px;
+    height: auto;
+    justify-content: right;
+    user-select: none;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0%
+{
+    transform: rotate(0deg);
+}100%{
+transform: rotate(360deg);
+}
+}
+.category{
+    width: 100%;
+display: flex;
+margin-bottom: 100px;
+justify-content: center;
+}
+.category .list-items{
+    width: 90%;
+    position: relative;
+    margin-top: 100px;
+}
+.category .list-items h3{
+    font-size: 20px;
+    font-weight:  600;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+}
+.category .list-items .card-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.category .card-list .card{
+    width: 200px;
+    height: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    background: white;
+    outline: 2px solid #faad69;
+}
+
+.category .card-list .card img{
+    width: 100px;;
+    height: auto;
+    bottom:  150px;
+    left:50px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-shadow: 0 #faad69;
+    border-radius: 60%;
+}
+.category .card-list.card .food-title{
+    padding: 40px 0 10px;
+}
+.category .card-list .card .food-title h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: sans-serif;
+
+}
+.category .card .desc p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+
+}
+.desc p{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+
+}
+.desc h3{
+    font-size: 25px;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+
+}
+.category .card .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer {
+    
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+footer .cs{
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.badge {
+    background-color: #ff511c;
+    color: white;
+    padding: 4px 8px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+/* Add this to your existing CSS styles */
+
+.card:hover {
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
+.card:hover .food-title {
+    color: #ff511c;
+}
+
+.card:hover .desc {
+    color: #555;
+}
+.pos{
+    position: absolute;
+float: right;
+
+}
+.src{
+    position: relative;
+    float: right;
+}
+#footerr li{
+    color: black;
+}
+#footerr a{
+    color: #000000;
+}
+#footerr{
+    background-color: #ffeae0;
+}
